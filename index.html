@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>80's 8-bit Game Quiz</title>
+
+    <meta charset="utf-8" />
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="left_score">
+            <p class="right"># Right: 1</p>
+        </div>
+
+        <div class="middle_score">
+            <h2>YOUR SCORE</h2>
+        </div>
+
+        <div class="right_score">
+            <p class="wrong"># Wrong: 2</p>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="quiz_header">
+            <h1>80's Retro Game Quiz - 8 bit games and their music!</h1>
+            <h2>Question 1 - What music is this 8 bit game from?</h2>
+            <audio class="audio" src="audio/zelda.mp3" controls="controls">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <form id="quizform">
+            <div class="quizrow">
+                <div class="checkbox">
+                    <input type="radio" name="choose" value="gamename"></input>
+                </div>
+
+                <div class="answer">Super Mario Bros</div>
+
+                <div class="checkbox">
+                    <input type="radio" name="choose" value="gamename"></input>
+                </div>
+
+                <div class="answer">Pac Man</div>
+            </div>
+
+            <div class="quizrow">
+                <div class="checkbox">
+                    <input type="radio" name="choose" value="gamename"></input>
+                </div>
+
+                <div class="answer">Tron</div>
+
+                <div class="checkbox">
+                    <input type="radio" name="choose" value="gamename"></input>
+                </div>
+
+                <div class="answer">Legend of Zelda</div>
+            </div>
+
+            <div class="quizrow">
+                <div class="checkbox">
+                    <input type="radio" name="choose" value="gamename"></input>
+                </div>
+
+                <div class="answer">Pole Position</div>
+
+                <div class="checkbox">
+                    <input type="radio" name="choose" value="gamename"></input>
+                </div>
+
+                <div class="answer">Donkey Kong</div>
+            </div>
+
+            <div class="submitrow">
+                <a href="#" id="guess">Guess!</a>
+            </div>
+        </form>
+
+    </div>
+
+    </section>
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>
