@@ -3,34 +3,53 @@
 
 <head>
     <title>80's 8-bit Game Quiz</title>
-
     <meta charset="utf-8" />
     <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="stylesheet" href="">
 </head>
 
 <body>
 
-    <div class="nav">
-        <div class="left_score">
-            <p class="right"># Right: 1</p>
-        </div>
+    <header>
+        <!--topnav-->
+        <div class="nav">
+            <div class="left_score">
+                <p class="right"># Right: 0</p>
+            </div>
 
-        <div class="middle_score">
-            <h2>YOUR SCORE</h2>
-        </div>
+            <div class="middle_score">
+                <a class="new" href="#">new game</a>
+                <h2>YOUR SCORE</h2>
+            </div>
 
-        <div class="right_score">
-            <p class="wrong"># Wrong: 2</p>
+            <div class="right_score">
+                <p class="wrong"># Wrong: 0</p>
+            </div>
         </div>
-    </div>
-
+    </header>
 
 
     <div class="container">
+
+        <!--show on new game only, clicking lets play makes it go away-->
+        <div class="instructions">
+            <img class="invaders" src="images/invaders.png">
+
+            <h3>80's 8-bit Game Quiz</h3>
+            <h3>How do I play?</h3>
+            <div>
+                <p>This game tests your 80's 8-bit game knowledge. Remember those great music tracks you loved from your early games, well now you can put your skills to the test!</p>
+                <ul>
+                    <li>Head to each question, then click to play the music track.</li>
+                    <li>Choose which 80's 8-bit game you think the music is from.</li>
+                    <li>Make your choices and compare your hi-scores with others!</li>
+                </ul>
+                <p>Good luck gamer!</p>
+                <a class="play" href="#">Let's Play!</a>
+            </div>
+        </div>
+
         <div class="quiz_header">
-            <h1>80's Retro Game Quiz - 8 bit games and their music!</h1>
             <h2>Question 1 - What music is this 8 bit game from?</h2>
             <audio class="audio" src="audio/zelda.mp3" controls="controls">
                 Your browser does not support the audio element.
