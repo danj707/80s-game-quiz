@@ -45,8 +45,14 @@ h2 {
     align-content: center;
 }
 
+.questiontext,
 .instructions {
     color: white;
+}
+
+.radio {
+    width: 20px;
+    height: 20px;
 }
 
 .container {
