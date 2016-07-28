@@ -1,14 +1,32 @@
-/*
-* {
-    border: 1px solid red;
+/*main styles*/
+
+html {
+    font-family: 'Press Start 2P', cursive;
 }
-*/
+
+body {
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: content-box;
+}
+
+h1,
+h2 {
+    color: white;
+}
+
+p {
+    line-height: 1.5;
+}
+
+li {
+    padding: 5px;
+}
 
 
-/*style for hidden overlay*/
+/*styles for hidden overlays*/
 
-.overlay,
-.correct,
 .incorrect {
     width: 50%;
     height: 50%;
@@ -25,31 +43,31 @@
     vertical-align: middle;
 }
 
-.top {
-    color: RED;
-}
-
-p {
-    line-height: 1.5;
-}
-
-li {
-    padding: 5px;
-}
-
-.score {
-    color: orangered;
+.correct {
+    width: 50%;
+    height: 50%;
+    color: #fff;
+    background: darkgreen;
+    position: absolute;
+    border-radius: 5px;
+    top: 25%;
+    left: 25%;
+    margin: 0;
+    z-index: 1000;
+    display: none;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .hiscore {
-    width: 75%;
-    height: 75%;
+    width: 60%;
+    height: 70%;
     color: #00FF33;
-    background: #000000;
+    background: black;
     position: absolute;
     border-radius: 5px;
-    top: 12.5%;
-    left: 12.5%;
+    top: 10%;
+    left: 20%;
     margin: 0;
     z-index: 1000;
     display: none;
@@ -58,19 +76,20 @@ li {
     text-align: center;
 }
 
-html {
-    font-family: 'Press Start 2P', cursive;
+
+/*class styles*/
+
+.new {
+    color: orangered;
+    font-size: 18px;
 }
 
-body {
-    background-image: url('../images/bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-sizing: content-box;
+.top {
+    color: RED;
 }
 
-h1 {
-    color: white;
+.score {
+    color: orangered;
 }
 
 .submit {
@@ -82,12 +101,13 @@ h1 {
 }
 
 .myimg {
-    width: 200px;
+    width: 300px;
     height: auto;
 }
 
-h2 {
-    color: white;
+.gameimage {
+    width: 100px;
+    height: auto;
 }
 
 .invaders {
@@ -178,14 +198,14 @@ h2 {
     color: white;
 }
 
+.submitrow {
+    text-align: center;
+}
+
 #guess {
     color: orange;
     font-size: 48px;
     text-decoration: none;
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.submitrow {
-    text-align: center;
 }
