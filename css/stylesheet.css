@@ -7,17 +7,55 @@
 
 /*style for hidden overlay*/
 
-.overlay {
-    width: 100%;
-    height: 100%;
+.overlay,
+.correct,
+.incorrect {
+    width: 50%;
+    height: 50%;
     color: #fff;
     background: #e74c3c;
     position: absolute;
-    top: 0;
-    left: 0;
+    border-radius: 5px;
+    top: 25%;
+    left: 25%;
     margin: 0;
     z-index: 1000;
     display: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.top {
+    color: RED;
+}
+
+p {
+    line-height: 1.5;
+}
+
+li {
+    padding: 5px;
+}
+
+.score {
+    color: orangered;
+}
+
+.hiscore {
+    width: 75%;
+    height: 75%;
+    color: #00FF33;
+    background: #000000;
+    position: absolute;
+    border-radius: 5px;
+    top: 12.5%;
+    left: 12.5%;
+    margin: 0;
+    z-index: 1000;
+    display: none;
+    border: 5px solid red;
+    border-radius: 5px;
+    text-align: center;
 }
 
 html {
@@ -33,6 +71,19 @@ body {
 
 h1 {
     color: white;
+}
+
+.submit {
+    font-size: 24px;
+    font-family: 'Press Start 2P', cursive;
+    color: red;
+    background: none;
+    border: none;
+}
+
+.myimg {
+    width: 200px;
+    height: auto;
 }
 
 h2 {

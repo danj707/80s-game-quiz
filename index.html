@@ -35,38 +35,70 @@
         <div class="instructions">
             <img class="invaders" src="images/invaders.png">
 
-            <h3>80's 8-bit Game Quiz</h3>
-            <h3>How do I play?</h3>
+            <h3 class="top">80's 8-bit Game Quiz</h3>
+            <h3 class="top">How do I play?</h3>
             <div>
-                <p>This game tests your 80's 8-bit game knowledge. Remember those great music tracks you loved from your early games, well now you can put your skills to the test!</p>
+                <p class="intro">This game tests your 80's 8-bit game knowledge. Remember those great music tracks you loved from your early games, well now you can put your skills to the test!</p>
                 <ul>
                     <li>Head to each question, then click to play the music track.</li>
                     <li>Choose which 80's 8-bit game you think the music is from.</li>
                     <li>Make your choices and compare your hi-scores with others!</li>
                 </ul>
                 <p>Good luck gamer!</p>
-                <a class="play" href="#">Let's Play!</a>
+                <a class="play" href="#">-> Let's Play! <- </a>
+            </div>
+        </div>
+
+        <!--Got it right!-->
+        <div class="correct">
+            <h2 class="feedback">You're right!</h2>
+            <div>
+                <p class="gameinfo">Facts:</p>
+                <a class="close_correct" href="#">Next Question</a>
+            </div>
+        </div>
+
+        <!--Got it wrong!-->
+        <div class="incorrect">
+            <h2 class="feedback">You're wrong!</h2>
+            <div>
+                <p class="correctanswerwas">The correct answer was</p>
+                <a class="close_incorrect" href="#">Next Question</a>
+            </div>
+        </div>
+
+        <!--Hiscore-->
+        <div class="hiscore">
+            <h1>GAME OVER</h1>
+            <div>
+                <p class="yourscore">Your Score: </p>
+
+                <P>TOP PLAYERS:</P>
+                <p class="top">BOB: 7</p>
+                <p class="top">JOE: 7</p>
+                <p class="top">LOU: 6</p>
+                <p class="top">PAM: 5</p>
+
+                <img class="myimg" src="images/victory.gif" height=auto>
+
+                <p><a class="new" href="#">Play Again</a></p>
             </div>
         </div>
 
         <div class="quiz_header">
-            <h2>Question # </h2>
+            <h2 class="questionnum">Question # </h2>
             <p class="questiontext">Which game does this music go with?</p>
             <audio class="audio" src="audio"></audio>
         </div>
 
         <form id="quizform">
 
-
-            <input type="submit" value="Make a Guess!">
         </form>
 
-    </div>
-
-    </section>
-    <!-- JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+        </section>
+        <!-- JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js "></script>
+        <script type="text/javascript " src="js/app.js "></script>
 </body>
 
 </html>
