@@ -208,6 +208,7 @@ $(document).ready(function () {
                 $(".incorrect").fadeIn(1000);
                 currentQuestion++;
                 wrong++;
+                $('h2.feedback').html("You're wrong :-(");
                 $('p.wrong').html("# Wrong: " + wrong);
                 $('p.correctanswerwas').html("The correct answer was: " + correctAnswer);
             }
