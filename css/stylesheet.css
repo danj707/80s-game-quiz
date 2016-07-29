@@ -8,7 +8,7 @@ body {
     background-image: url('../images/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 h1,
@@ -20,6 +20,10 @@ p {
     line-height: 1.5;
 }
 
+ul {
+    list-style: none;
+}
+
 li {
     padding: 5px;
 }
@@ -29,14 +33,14 @@ li {
 
 .incorrect {
     width: 50%;
-    height: 50%;
+    height: auto;
     color: #fff;
     background: #e74c3c;
     position: absolute;
     border-radius: 5px;
     top: 25%;
     left: 25%;
-    margin: 0;
+    padding-bottom: 15px;
     z-index: 1000;
     display: none;
     text-align: center;
@@ -45,14 +49,14 @@ li {
 
 .correct {
     width: 50%;
-    height: 50%;
+    height: auto;
     color: #fff;
     background: darkgreen;
     position: absolute;
     border-radius: 5px;
     top: 25%;
     left: 25%;
-    margin: 0;
+    padding-bottom: 15px;
     z-index: 1000;
     display: none;
     text-align: center;
@@ -61,7 +65,7 @@ li {
 
 .hiscore {
     width: 60%;
-    height: 70%;
+    height: auto;
     color: #00FF33;
     background: black;
     position: absolute;

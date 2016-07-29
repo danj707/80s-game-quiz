@@ -177,7 +177,7 @@ $(document).ready(function () {
     }
 
     //on clicking submit button, checks the user's guess against array data answer
-    $("form").submit(function () {
+    $("form").submit(function (event) {
         event.preventDefault();
         var userGuess = $("input[class='radio']:checked").val();
         var correctAnswer = quizArr[currentQuestion].qcorrect;
@@ -195,8 +195,8 @@ $(document).ready(function () {
                 right++;
                 $('p.right').html("# Right: " + right);
                 $('h2.feedback').html("You're right!");
-                $('p.gameinfo').html("<img class=gameimage src=" + image + "></p>");
-                $('p.gameinfo').append("Facts: <p>" + facts + "</p>");
+                $('ul.gameinfo').html("<li><img class=gameimage src=" + image + "></li>");
+                $('ul.gameinfo').append("<li>Facts:" + facts + "</li>");
             } else if (typeof userGuess === 'undefined') {
                 $(".incorrect").fadeIn(1000);
                 currentQuestion++;
