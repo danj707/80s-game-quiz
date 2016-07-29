@@ -52,19 +52,15 @@
         <!--Got it right!-->
         <div class="correct">
             <h2 class="feedback">You're right!</h2>
-            <div>
-                <p class="gameinfo">Facts:</p>
-                <a class="close_correct" href="#">Next Question</a>
-            </div>
+            <ul class="gameinfo"></ul>
+            <p><a class="close_correct" href="#">Next Question</a></p>
         </div>
 
         <!--Got it wrong!-->
         <div class="incorrect">
             <h2 class="feedback">You're wrong!</h2>
-            <div>
-                <p class="correctanswerwas">The correct answer was</p>
-                <a class="close_incorrect" href="#">Next Question</a>
-            </div>
+            <p class="correctanswerwas">The correct answer was</p>
+            <a class="close_incorrect" href="#">Next Question</a>
         </div>
 
         <!--Hiscore-->
@@ -88,7 +84,7 @@
         <div class="quiz_header">
             <h2 class="questionnum">Question # </h2>
             <p class="questiontext">Which game does this music go with?</p>
-            <audio class="audio" src="audio"></audio>
+            <audio class="audio" src=""></audio>
         </div>
 
         <form id="quizform">
