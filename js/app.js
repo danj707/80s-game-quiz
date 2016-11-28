@@ -86,18 +86,18 @@ function readyPlayerOne() {
     $('form#quizform').show(); //show the quiz form
 
     //question content at top for whichever question we are on
-    $("p.questiontext").html(quizArr[currentQuestion].qtext);
+    $('p.questiontext').html(quizArr[currentQuestion].qtext);
 
     //display audio controls, generate link
-    $("audio").replaceWith('<audio class="audio" src="' + quizArr[currentQuestion].qmusic + '"controls="controls"></audio>');
+    $('audio').replaceWith('<audio class="audio" src="' + quizArr[currentQuestion].qmusic + '"controls="controls"></audio>');
 
     var answer;
     var questionText;
 
     //get question text
     questionText = quizArr[currentQuestion].qtext;
-    $("h2.questionnum").html("Question #" + (currentQuestion + 1) + " of " + questionNumbers); //set the question numbers
-    $("form#quizform").empty();
+    $('h2.questionnum').html('Question #' + (currentQuestion + 1) + " of " + questionNumbers); //set the question numbers
+    $('form#quizform').empty();
 
     //for each question, starting at array pos 0, iterate, getting question answers, building and displaying in rows
     for (i = 0; i < questionNumbers; i++) {
@@ -121,35 +121,35 @@ function readyPlayerOne() {
             '<input class="submit" type="submit" value="-> Am I right?">' +
             '</div>';
 
-        $("form#quizform").append(text1); //adds the answers and radio buttons
+        $('form#quizform').append(text1); //adds the answers and radio buttons
 
     };
 
-    $("form#quizform").append(submit); //adds the submit button at the bottom, only do it once
+    $('form#quizform').append(submit); //adds the submit button at the bottom, only do it once
 
 };
 
 $(document).ready(function () {
 
     /*--- Hide correct modal box ---*/
-    $("a.close_correct").click(function () {
-        $(".correct").fadeOut(1000);
+    $('a.close_correct').click(function () {
+        $('.correct').fadeOut(1000);
         isGameOver();
     });
 
     /*--- Hide incorrect modal box ---*/
-    $("a.close_incorrect").click(function () {
-        $(".incorrect").fadeOut(1000);
+    $('a.close_incorrect').click(function () {
+        $('.incorrect').fadeOut(1000);
         isGameOver();
     });
 
     //reload the page on new game click
-    $(".new").click(function () {
+    $('.new').click(function () {
         location.reload();
     });
 
     //after instructions, click to play
-    $(".play").click(function () {
+    $('.play').click(function () {
         readyPlayerOne();
     });
 
@@ -181,7 +181,7 @@ $(document).ready(function () {
     }
 
     //on clicking submit button, checks the user's guess against array data answer
-    $("form").submit(function (event) {
+    $('form').submit(function (event) {
         event.preventDefault();
         var userGuess = $("input[class='radio']:checked").val();
         var correctAnswer = quizArr[currentQuestion].qcorrect;
@@ -191,10 +191,8 @@ $(document).ready(function () {
         checkGuess(userGuess, correctAnswer);
 
         function checkGuess(userGuess, correctAnswer) {
-            console.log(userGuess);
-            console.log(correctAnswer);
             if (userGuess == correctAnswer) {
-                $(".correct").fadeIn(1000);
+                $('.correct').fadeIn(1000);
                 currentQuestion++;
                 right++;
                 $('p.right').html("# Right: " + right);
@@ -202,14 +200,14 @@ $(document).ready(function () {
                 $('ul.gameinfo').html("<li><img class=gameimage src=" + image + "></li>");
                 $('ul.gameinfo').append("<li>Facts:" + facts + "</li>");
             } else if (typeof userGuess === 'undefined') {
-                $(".incorrect").fadeIn(1000);
+                $('.incorrect').fadeIn(1000);
                 currentQuestion++;
                 wrong++;
                 $('p.wrong').html("# Wrong: " + wrong);
                 $('h2.feedback').html("Maybe you could make a choice next time?");
                 $('p.correctanswerwas').html("The correct answer was: " + correctAnswer);
             } else {
-                $(".incorrect").fadeIn(1000);
+                $('.incorrect').fadeIn(1000);
                 currentQuestion++;
                 wrong++;
                 $('h2.feedback').html("You're wrong :-(");
