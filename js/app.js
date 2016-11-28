@@ -143,9 +143,16 @@ $(document).ready(function () {
         isGameOver();
     });
 
-    //reload the page on new game click
+    //refreshes the game state, resets global vars and calls player function
     $('.new').click(function () {
-        location.reload();
+        currentQuestion = 0;
+        questionNumbers = quizArr.length;
+        right = 0;
+        $('p.right').html("# Right: " + right);
+        wrong = 0;
+        $('p.wrong').html("# Wrong: " + wrong);
+
+        readyPlayerOne();
     });
 
     //after instructions, click to play
