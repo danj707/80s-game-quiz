@@ -108,10 +108,14 @@ function readyPlayerOne() {
             '<div class="checkbox">' +
             '<input type="radio" class="radio" name="chose" value="' +
             answer +
-            '"></input>' +
-            '</div><div class="answer">' +
+            '" id="' +
             answer +
-            '</div>';
+            '"></input>' +
+            '</div><label for="'+
+            answer +
+            '"><div class="answer">' +
+            answer +
+            '</label></div>';
 
         var submit = '<div class="submitrow">' +
             '<input class="submit" type="submit" value="-> Am I right?">' +
